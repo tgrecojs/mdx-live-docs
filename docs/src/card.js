@@ -17,7 +17,7 @@ export default () =>
       fill='white'
       textAnchor='middle'
       style={{
-        fontFamily: 'system-ui, sans-serif',
+        fontFamily: 'Bitter, serif',
         fontSize: 48,
         fontWeight: 'bold',
         textAlign: 'center',

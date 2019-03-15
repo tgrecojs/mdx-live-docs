@@ -9,10 +9,10 @@ import {
 import components from '../src/components';
 
 const docsTheme = {
-  font: 'Georgia, serif',
   lineHeight: '1.5',
+  font: "'Bitter', serif",
   colors: {
-    text: '#111',
+    text: 'blue',
     background: 'orange',
     link: '#07c'
   },

@@ -11,7 +11,13 @@ const BaseCSS = ({ css }) =>
   />
 
 BaseCSS.defaultProps = {
-  css: '*{box-sizing:border-box}body{margin:0}'
+  css: `
+  @import url('https://fonts.googleapis.com/css?family=Bitter:400,700');
+  *{box-sizing:border-box}body{margin:0;}
+  p, div, h1, h2,h3,h4,h5,h6, a {
+    font-family: 'Bitter', serif;
+  }
+  `
 }
 
 export default class MyDocument extends Document {
@@ -27,6 +33,7 @@ export default class MyDocument extends Document {
           <meta name='twitter:title' content='MDX Docs' />
           <meta name='twitter:description' content='Document and develop React components with MDX and Next.js' />
           <meta name='twitter:image' content='https://jxnblk.com/mdx-docs/static/card.png' />
+        <BaseCSS />
         </Head>
         <body>
           <Main />
