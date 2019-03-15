@@ -6,14 +6,26 @@
     "card": "npx repng src/card.js -w 1024 -h 512 -d static -f card.png"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.9",
+    "@emotion/styled": "^10.0.9",
     "@mdx-js/mdx": "^0.15.5",
     "@mdx-js/tag": "^0.15.0",
     "babel-loader": "^8.0.4",
     "babel-plugin-styled-components": "^1.8.0",
     "next": "^7.0.1",
-    "prop-types": "^15.6.2",
-    "react": "^16.5.2",
+    "object-style": "^1.0.3",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.4",
     "react-dom": "^16.5.2",
+    "react-live": "^1.12.0",
+    "remark-autolink-headings": "^5.1.0",
+    "remark-emoji": "^2.0.2",
+    "remark-images": "^0.18.0",
+    "remark-slug": "^5.1.1",
+    "remark-unwrap-images": "^0.2.0",
     "styled-components": "^3.4.9"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-export-namespace-from": "^7.2.0"
   }
 }

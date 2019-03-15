@@ -11,11 +11,11 @@ export default {
   lineHeight: '1.5',
   colors: {
     text: '#111',
-    background: '#fff',
+    background: 'orange',
     link: '#07c'
   },
   LayoutSidebar: {
-    backgroundColor: '#f6f6f6',
+    backgroundColor: 'orange',
     paddingTop: '32px',
     paddingBottom: '32px'
   }

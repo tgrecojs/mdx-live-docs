@@ -15,18 +15,7 @@ BaseCSS.defaultProps = {
 }
 
 export default class MyDocument extends Document {
-  static getInitialProps ({ renderPage }) {
-    const sheet = new ServerStyleSheet()
-    const page = renderPage(App => props => (
-      sheet.collectStyles(<App {...props} />)
-    ))
-    const styles = sheet.getStyleElement()
-    return { ...page, styles }
-  }
-
   render () {
-    const { styles } = this.props
-
     return (
       <html>
         <Head>
@@ -38,8 +27,6 @@ export default class MyDocument extends Document {
           <meta name='twitter:title' content='MDX Docs' />
           <meta name='twitter:description' content='Document and develop React components with MDX and Next.js' />
           <meta name='twitter:image' content='https://jxnblk.com/mdx-docs/static/card.png' />
-          <BaseCSS />
-          {styles}
         </Head>
         <body>
           <Main />

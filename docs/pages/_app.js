@@ -6,12 +6,28 @@ import {
   SideNav,
   Pagination
 } from 'mdx-docs'
-import components from '../src/components'
+import components from '../src/components';
+
+const docsTheme = {
+  font: 'Georgia, serif',
+  lineHeight: '1.5',
+  colors: {
+    text: '#111',
+    background: 'orange',
+    link: '#07c'
+  },
+  LayoutSidebar: {
+    backgroundColor: 'orange',
+    paddingTop: '32px',
+    paddingBottom: '32px'
+  }
+};
 
 const routes = [
   { name: 'MDX Docs', path: '/' },
   { name: 'Theming', path: '/theming' },
   { name: 'Components', path: '/components' },
+  {name: 'home', path: '/ui/home'},
   { name: 'Custom Setup', path: '/custom-setup' },
   { name: 'Migrating from x0', path: '/migrating-from-x0' },
   { name: 'GitHub', path: 'https://github.com/jxnblk/mdx-docs' },
@@ -37,6 +53,7 @@ export default class MyApp extends App {
           <title>MDX Docs</title>
         </Head>
         <Layout
+          theme={docsTheme}
           components={components}
           routes={routes}
           {...this.props}>

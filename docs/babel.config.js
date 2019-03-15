@@ -4,6 +4,5 @@ module.exports = {
   ],
   plugins: [
     '@babel/proposal-export-namespace-from',
-    'babel-plugin-styled-components',
   ]
 }

@@ -1,6 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 import Link from 'next/link'
+import ProductRow from '../ui-components/ProductRow/component';
 
 const css = key => props => props.theme[key]
 
@@ -20,6 +21,7 @@ const p = styled.p([], css('p'))
 const table = styled.table([], css('table'))
 
 export default {
+  ProductRow,
   a,
   h1,
   h2,
@@ -29,4 +31,14 @@ export default {
   h6,
   p,
   table,
+  Box: props => 
+  <div style={props.boxStyles}>
+    <h2>{props.text}</h2>
+    {props.children}
+  </div>,
+  ProductCard: props => 
+  <div style={props.boxStyles}>
+    <h2>{props.text}</h2>
+    {props.children}
+  </div>
 }
