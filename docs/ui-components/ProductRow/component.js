@@ -1,7 +1,8 @@
-import styled from '@emotion/styled';
+/** @jsx jsx */
+import {css, jsx} from '@emotion/core';
 import ProductCard from '../ProductCard/component';
 
-const products = [
+export const products = [
   {
     id: 0,
     imageSrc: 'https://via.placeholder.com/350x250/c27e33/ffffff?Product=One',
@@ -29,18 +30,20 @@ const products = [
   }
 ];
 
-const ProductRow = styled.div`
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-`;
+const styles = {
+  display: 'flex',
+  justifyContent: 'space-between',
+  flexWrap: 'wrap'
+};
 
-const Products = ({ data = products }) => (
-  <ProductRow>
+const Products = ({ rowStyles = styles, data = products }) => (
+  <div css={css`
+      ${rowStyles}
+  `}>
     {data.map(x => (
       <ProductCard key={x.id} {...x} />
     ))}
-  </ProductRow>
+  </div>
 );
 
 export default Products;

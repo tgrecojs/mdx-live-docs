@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import Link from 'next/link'
-import ProductRow from '../ui-components/ProductRow/component';
+import ProductRow, {products} from '../ui-components/ProductRow/component';
+import ProductCard from '../ui-components/ProductCard/component';
 
 const css = key => props => props.theme[key]
 
@@ -18,7 +19,11 @@ const h4 = styled.h4([], css('h4'))
 const h5 = styled.h5([], css('h5'))
 const h6 = styled.h6([], css('h6'))
 const p = styled.p([], css('p'))
-const table = styled.table([], css('table'))
+const table = styled.table([], css('table'));
+
+const td = styled.td`
+  padding: 10px;
+`;
 
 export default {
   ProductRow,
@@ -31,14 +36,11 @@ export default {
   h6,
   p,
   table,
+  td,
   Box: props => 
   <div style={props.boxStyles}>
     <h2>{props.text}</h2>
     {props.children}
   </div>,
-  ProductCard: props => 
-  <div style={props.boxStyles}>
-    <h2>{props.text}</h2>
-    {props.children}
-  </div>
+  ProductCard
 }

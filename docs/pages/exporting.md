@@ -1,5 +1,0 @@
-
-# Exporting
-
-- static export
-- assetPath

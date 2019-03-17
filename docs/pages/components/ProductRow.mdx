@@ -1,0 +1,23 @@
+### `ProductRow`
+
+Prop | Type | Description
+---|---|---
+`rowStyles` | object | style object containing object 
+`data` | array | Used to create `<ProductCard />` component documented above. Each object should contain `id`, `title`, `imageSrc`, and `description`.
+
+```.jsx
+<ProductRow 
+    data={
+        [{
+            id: 0,
+            imageSrc: 'https://via.placeholder.com/350x250/c27e33/ffffff?Product=One',
+            title: 'Sample Product One'
+        },
+        {
+            id: 1,
+            imageSrc: 'https://via.placeholder.com/350x250/7e33c2/ffffff?Product=Two',
+            title: 'Sample Product Two'
+        }]
+    }
+ />
+```

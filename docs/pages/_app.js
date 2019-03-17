@@ -23,14 +23,20 @@ const docsTheme = {
   }
 };
 
+const baseUrls = {
+  home: '/',
+  components: '/components',
+  devUrl: 'http://localhost:3000',
+}
+
 const routes = [
-  { name: 'MDX Docs', path: '/' },
-  { name: 'Theming', path: '/theming' },
+  { name: 'Home', path: '/' },
   { name: 'Components', path: '/components' },
-  {name: 'home', path: '/ui/home'},
-  { name: 'Custom Setup', path: '/custom-setup' },
-  { name: 'Migrating from x0', path: '/migrating-from-x0' },
-  { name: 'GitHub', path: 'https://github.com/jxnblk/mdx-docs' },
+  {name: 'ProductCard', path: '/components/ProductCard'},
+  {name: 'ProductRow', path: `${baseUrls.components}/ProductRow`},
+  {name: 'Table', path: `${baseUrls.components}/Table`},
+  {name: 'Documentation Guide', path: '/help'},
+  { name: 'Development Server', path: `${baseUrls.devUrl}` },
 ]
 
 export default class MyApp extends App {
